@@ -1,0 +1,14 @@
+name: ai-invocations-service
+port: 9101
+lang: python
+description: "ai-invocations-service \u2014 domain: ai_agents"
+http_deps:
+- ai-agents-service
+- ml-models-service
+- patient-consent-service
+- audit-log-service
+publishes:
+- audit.event
+subscribes:
+- lab.result.available
+- encounter.started
