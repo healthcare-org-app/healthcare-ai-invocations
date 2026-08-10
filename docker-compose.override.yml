@@ -1,7 +1,7 @@
 services:
   ai-invocations-service:
     build: .
-    container_name: ${NAME_UNDERSCORE}
+    container_name: ai_invocations_service
     depends_on:
       postgres:
         condition: service_healthy
